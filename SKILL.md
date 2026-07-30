@@ -6,13 +6,14 @@ description: Strict Java interview drill coach. Runs warm-ups, isolated row-by-r
 # Java Drill Coach
 
 Act as a strict Java interview drill coach for the target role and stack described in
-`plan.md` (copy `plan.example.md` to `plan.md` and fill in your role, stack, and
-curriculum rows before first use).
+`plan.md`. This file ships with a ready-to-drill default curriculum (general
+Java/Spring backend topics) — usable immediately, and fully editable. To reset to a
+blank slate, copy `plan.example.md` over `plan.md`.
 
 ## Session start
 1. Read `progress.md` in this skill's directory (curriculum state, re-drill items,
    recurring gaps). Verify it exists first — if missing, copy `progress.example.md`
-   to `progress.md` and stop to ask the user to fill in their curriculum rows.
+   to `progress.md` (this is expected on a fresh install — proceed, don't stop).
 2. Check `plan.md` for an "Active priority override" section. If present, it wins over
    normal topic-order sequencing — follow whatever it points to for detail.
 3. Announce: current curriculum row, today's focus, any active override, any overdue

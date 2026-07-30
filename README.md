@@ -21,17 +21,19 @@ you invoke it, and it directs Claude to read/write two files that live alongside
 - `progress.md` — a running log the coach appends to after every session: what you
   covered, what you missed, recurring gaps, and what to focus on next time.
 
-Both are user-owned data files, not part of the skill logic — see [`plan.example.md`](plan.example.md)
-and [`progress.example.md`](progress.example.md) for the templates.
+Both are user-owned data files, not part of the skill logic. `plan.md` ships pre-filled
+with a usable default curriculum; [`plan.example.md`](plan.example.md) is a blank
+reset template. `progress.md` starts empty (or is auto-created from
+[`progress.example.md`](progress.example.md) on first run).
 
 ## How to use it
 
 1. **Install the skill.** Copy `SKILL.md` into a folder named `java-coach` under your
    Claude Code skills directory (typically `~/.claude/skills/java-coach/SKILL.md`).
-2. **Set up your curriculum.** Copy `plan.example.md` to `plan.md` in that same folder
-   and fill in your target role, stack, and the concepts you want drilled, in order.
-   Copy `progress.example.md` to `progress.md` (leave it mostly empty — the coach
-   fills it in).
+2. **(Optional) Customize your curriculum.** `plan.md` ships with a ready-to-drill
+   default (general Java/Spring backend topics) — you can start immediately. Edit it
+   anytime to match your actual target role, stack, and priority order. Want a blank
+   slate instead? Copy `plan.example.md` over `plan.md`.
 3. **Start a session.** In Claude Code, say something like `/java-coach`, "drill me",
    or "interview prep session." Claude reads your plan and progress files and
    announces where you left off.
@@ -55,9 +57,10 @@ and [`progress.example.md`](progress.example.md) for the templates.
   taste).
 - **No answers on demand.** Tiered hints exist specifically to stop you from asking
   "just tell me" and getting it. You have to work for each hint tier.
-- **You do the curriculum design.** This skill does not ship a Java curriculum — you
-  write your own concept list in `plan.md`. It's a coaching *engine*, not a
-  pre-packaged course.
+- **Ships with a default curriculum, fully yours to edit.** `plan.md` comes
+  pre-filled with general Java/Spring backend topics so it works immediately —
+  but it's your file, not a locked-in course. Reorder, trim, or replace rows to
+  match your actual target role.
 - **State lives in plain Markdown files you own,** not a database or hidden config —
   you can read, edit, or delete your own progress log at any time.
 - **Requires actually maintaining `plan.md`/`progress.md`.** If you let those files
