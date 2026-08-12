@@ -63,6 +63,9 @@ reset template. `progress.md` starts empty (or is auto-created from
   match your actual target role.
 - **State lives in plain Markdown files you own,** not a database or hidden config —
   you can read, edit, or delete your own progress log at any time.
+- **Spaced repetition, not just miss-tracking.** `progress.md`'s Recall Queue
+  resurfaces every drilled row on a box schedule, including clean first-try passes —
+  correct answers decay too, just slower than misses.
 - **Requires actually maintaining `plan.md`/`progress.md`.** If you let those files
   go stale, the coach has nothing to work from. This is a tool for someone who wants
   structured, resumable practice — not a one-off Q&A.
